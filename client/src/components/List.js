@@ -1,19 +1,18 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
+import "../style/list.css";
 
 function List(props) {
-  const [text, setText] = useState("");
+  const [postList, setPostList] = useState([]);
 
   useEffect(() => {
-    let body = {
-      text: "hello",
-    };
-
     axios
-      .post("/api/test", body)
+      .post("/api/post/list")
       .then((res) => {
-        setText(res.data.text);
-        console.log(res);
+        if (res.data.success) {
+          setPostList([...res.data.postList]);
+        }
       })
       .catch((e) => {
         console.log(e);
@@ -21,13 +20,14 @@ function List(props) {
   }, []);
 
   return (
-    <div>
-      <div>{text}</div>
-      {props.contentList.map((content, i) => {
+    <div className="list-wrapper">
+      {postList.map((post, i) => {
         return (
-          <div key={i}>
-            content: {content}
-            <hr />
+          <div key={i} className="list-post">
+            <Link to={`/post/${post.postNum}`}>
+              <p className="list-title">{post.title}</p>
+              <p>{post.content}</p>
+            </Link>
           </div>
         );
       })}

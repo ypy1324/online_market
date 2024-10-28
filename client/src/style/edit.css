@@ -1,0 +1,85 @@
+.edit-wrapper {
+  width: 100%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.edit-form {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.edit-label {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.edit-title {
+  border-radius: 10px;
+  border: 1px solid grey;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.edit-content {
+  min-height: 350px;
+  resize: none;
+  border-radius: 10px;
+  border: 1px solid grey;
+  padding: 10px;
+}
+
+.edit-content::-webkit-scrollbar {
+  width: 10px;
+}
+
+.edit-content::-webkit-scrollbar-thumb {
+  background-color: grey;
+  border-radius: 15px;
+  background-clip: padding-box;
+  border: 2px solid transparent;
+}
+
+.edit-title:active,
+.edit-title:focus,
+.edit-content:active,
+.edit-content:focus {
+  outline: none;
+}
+
+.edit-btn-wrapper {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.edit-cancel {
+  margin-right: 10px;
+  border-radius: 15px;
+  padding: 5px 10px;
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+}
+
+.edit-cancel:hover {
+  background-color: black;
+  color: white;
+  border: 1px solid black;
+}
+
+.edit-submit {
+  border-radius: 15px;
+  padding: 5px 10px;
+  background-color: black;
+  color: white;
+  border: 1px solid black;
+}
+
+.edit-submit:hover {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+}

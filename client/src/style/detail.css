@@ -1,0 +1,78 @@
+.detail-wrapper {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  max-width: 756px;
+  margin: 0 auto;
+  @media (max-width: 756px) {
+    width: 90%;
+  }
+}
+
+.detail-spinner {
+  width: 100%;
+  height: calc(100vh - 2rem);
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.detail-post {
+  width: 100%;
+  height: auto;
+  background: lightgray;
+  padding: 30px 20px;
+  box-shadow: 0px 19px 38px rgba(0, 0, 0, 0.03),
+    0px 15px 12px rgba(0, 0, 0, 0.1);
+}
+
+.detail-title {
+  font-weight: bold;
+}
+
+.detail-img {
+  width: 100%;
+  height: auto;
+}
+
+.detail-content {
+  margin-bottom: 0px;
+}
+
+.detail-btn-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin: 20px 0;
+}
+
+.detail-edit-btn {
+  border-radius: 15px;
+  padding: 5px 10px;
+  font-weight: bold;
+  background-color: white;
+  border-color: black;
+  border: 1px solid black;
+}
+
+.detail-edit-btn:hover {
+  background-color: black;
+  color: white;
+  border: 1px solid black;
+}
+
+.detail-delete-btn {
+  border-radius: 15px;
+  padding: 5px 10px;
+  font-weight: bold;
+  margin-left: 10px;
+  background-color: red;
+  color: white;
+  border: 1px solid red;
+}
+
+.detail-delete-btn:hover {
+  background-color: white;
+  color: red;
+  border: 1px solid red;
+}
